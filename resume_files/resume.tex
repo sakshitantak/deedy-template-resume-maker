@@ -1,0 +1,155 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+\newcommand{\gpa}[1]{\textbf {Cumulative GPA:} #1}
+
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Sakshi Tantak}
+\newcommand{\yourWebsite}{https://sakshitantak.ml}
+\newcommand{\yourEmail}{sakshi99tantak@gmail.com}
+\newcommand{\yourPhone}{+91 9403878063}
+\newcommand{\githubUserName}{sakshitantak}
+\newcommand{\linkedInUserName}{sakshitantak}
+
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsite}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \yourPhone
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsite}{abdullaharif.tech}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape \yourName} \\ \vspace{1pt}
+    \small \yourPhone $|$ \href{mailto:\yourEmail}{\underline{\yourEmail}} $|$ 
+    \href{https://linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}}
+\end{center}
+
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+\resumeHeading{IIT Bombay}{Python Development Intern}{Mumbai, In}{May 2021 – Present}
+\begin{tightemize}
+    \item Developing an authentication and login system and designing dashboards for multiple types of users using \textbf{Python Flask} and \textbf{SQLite}.
+\end{tightemize}
+\sectionsep
+
+\resumeHeading{Omdena WEOWater Challenge}{Junior ML Engineer}{Remote, In}{May 2021 – July 2021}
+\begin{tightemize}
+    \item Developing an integrated system of \textbf{scrapers} to scrape articles related to natural calamities and classify them using an NLP model using \textbf{Python}.
+    \item \textbf{Task leader} for the task of \textbf{deployment} of application using \textbf{Streamlit and GCP}. 
+\end{tightemize}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Swap degree and school if your school is reputable
+\educationHeading{Bachelors of Engineering in Information Technology}{Pune Institute of Computer Technology}{Pune, In}{July 2021}
+
+\gpa{8.693/10}
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Past Projects}
+
+\Project{Summent}{http://summent-summarizer.herokuapp.com/}
+\descript{NLP, Python, Nodejs, Reactjs}\\
+End-to-end system for {\bf abstractive summarization} of {\bf patent} documents using {\bf Artificial Neural Networks}.
+\sectionsep
+  
+\Project{Use Case Generation based on User Stories}{https://github.com/sakshitantak/NLPActionExtraction}
+\descript{Python, Nodejs, MongoDB}\hfill \\
+Provided {\bf consultancy} to Virtue InfoTech for the project in {\bf training and integration} of {\bf Naive Bayes classifier}, with desktop application. \\
+\sectionsep
+
+\Project{Fine-tuning BERT for Multi-label Sentiment \\ classification}{https://github.com/sakshitantak/fine-tune-BERT-on-SST5}
+\descript{NLP, Python, Scrapy, PyTorch}\\
+Fine-tuned BERT on {\bf SST-5}. {\bf Scraped} product reviews of 100 {\bf mobile phones} from {\bf amazon.in} and tested the model on scraped data.
+\sectionsep
+
+\Project{IPL Winner Predictor}{https://github.com/sakshitantak/IPL-winner-predictor}
+\descript{ML, sklearn, seaborn}\\
+{\bf Visualized} and {\bf observed} the {\bf trends} and details in {\bf ball-by-ball dataset of IPL} using {\bf matplotlib} and {\bf seaborn} for interactive pictorial representation.
+Trained {\bf XGBClassifier} to predict the winner of a match and {\bf tuned hyperparameters} using {\bf GridSearchCV} to obtain a {\bf test data accuracy} of {\bf ~96\%}. {\bf Visualized} the {\bf results} using matplotlib and seaborn.\\
+\sectionsep
+  
+
+\Project{Pan-India Document Management System}{}
+\descript{Java, MySQL, JSP, CSS, JDBC}\\
+Developed a {\bf web-based} application to aggregate all the {\bf legal} and relevant details of users and structure them according to {\bf legally-binding identity documents} like {\bf Aadhar Card, PAN Card and Driving Licence}. Designed {\bf front-end} in {\bf JSP, CSS, Bootstrap}. Established{\bf connectivity} between front-end and back-end via {\bf JDBC driver}, {\bf served} in {\bf Java Servlet}.\\
+\sectionsep
+
+
+\section{Ongoing Projects}
+\Project{SlideMate}{}
+\descript{OCR, NLP, Python, JavaScript}\\
+\sectionsep
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{resumeSkillList}
+    \singleItem{Languages:}{C, C++, Python, JavaScript, Dart, SQL}
+    \\
+    \singleItem{Web Development:}{Python Flask, NodeJS, JavaScript, HTML/CSS}
+    \\
+    \singleItem{Technology:}{numpy, pandas, sklearn, matplotlib, gensim, bs4, opencv, NLTK, Git, AWS, GCP, Docker, \LaTeX, MongoDB, MySQL, SQLite, \\ spacy, huggingface's transformers, TensorFlow Keras, PyTorch, scrapy, streamlit, Algorithmia}\\
+    \singleItem{Familiar with:}{GPT-2, GPT-3, BERT, BART, T5, BigBird, BigBirdPegasus, Pegasus}
+\end{resumeSkillList}
+
+\sectionsep{}
+
+\section{Course Work}
+\begin{resumeSkillList}
+    \singleItem{Elective Courses Taken:}{Business Analytics and Intelligence, Soft Computing, Computational Optimization, Social Media Analytics}\\
+    \singleItem{Deep Learning Coursera:}{Deep Learning specialization by deeplearning.ai, Natural Language Processing specialization by deeplearning.ai}
+\end{resumeSkillList}
+\sectionsep
+
+\section{Interests \& Hobbies}
+\begin{resumeSkillList}
+    Ex-gymnast, Poetry \& Writing, Swimming, Air Rifles, Painting    
+\end{resumeSkillList}
+
+ % A more concise alternate 
+% \begin{resumeSkillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{resumeSkillList}
+\end{document}
